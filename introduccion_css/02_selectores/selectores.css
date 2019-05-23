@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #3367D6;
+}
+
+section {
+    background: lightgray;
+}
+
+.color-gris {
+    color: gray;
+}
+
+.texto-negrita {
+    fon-weigth: bold:
+}
+
+.texto-subrayado {
+    text-decoration: underline;
+}
+
+.texto-cursiva {
+    font-style: italic;
+}
+
+.soy_revelde {
+    color: red;
+    borde: solid 1px
+}
