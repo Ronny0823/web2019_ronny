@@ -44,4 +44,22 @@
 }   
 body{
     width: 50%;
-}    
+} 
+.size_pixel{
+    font-size: 10px;
+}   
+.size_em{
+    font-size: 10em;
+}
+.size_rem{
+    font-size: 10rem;
+}
+.size_ch{
+    font-size: 10ch;;
+}
+.size_porciento{
+    font-size: 10%;
+}
+.size_ex{
+    font-size: 10exs;
+}
