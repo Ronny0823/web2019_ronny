@@ -63,3 +63,31 @@ body{
 .size_ex{
     font-size: 10exs;
 }
+
+.size_cm{
+    width: 5cm;
+    height: 5cm;
+    background: #FFD700;
+    margin: 1em;
+}
+
+.size_mm{
+    width: 7mm;
+    height: 6mm;
+    background: rgb(255, 0, 0);
+    margin: 1em;
+}
+
+.size_pt{
+    width: 8pt;
+    height: 12pt;
+    background: rgb(0, 89, 255);
+    margin: 1em;
+}
+
+.size_in{
+    width: 5in;
+    height: 5in;
+    background: rgb(212, 194, 89);
+    margin: 1em;
+}
