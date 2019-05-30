@@ -14,8 +14,8 @@ body{
 /* Estilo para el nav */
 nav{
     background: #3F85DF;
-    width: 400px;
-    height: 100vh;
+    width: 100vwx;
+    height: 80px;
     border: solid 1px #707070
 }
 nav h1, nav a {
@@ -36,14 +36,44 @@ nav ul li  {
     padding-left: 30px;
     padding-right: 30px;
 
-    border: solid 1px #707070
+    border: solid 1px #707070;
+    display: inline;
 }
 
 nav h1 {
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
-    padding-right: 0;
+    padding-right: 0;       
 
-    font-weight: normal;
+    font-weight: normal;display: none;
+}
+nav li.active{
+    background: rgba(0, 0, 0, 0.5);
+}
+img{
+   widows: 800px;
+   height: 300px;
+   margin: 15px;
+   padding: 5px;
+}
+div{
+    display: inline;
+}
+
+ h1{
+     color:#000000;
+ }
+ span b span {
+    color: #000000;
+    width: 100px;
+    height: 50px;
+    margin-block: 10px;
+    padding: 5px;
+ } 
+p{
+    color:#000000
+}
+a{
+    color: #000000;
 }
