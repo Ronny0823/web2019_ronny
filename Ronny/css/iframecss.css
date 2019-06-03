@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+table tr td p{
+    color: black;
+}
+table tr td{
+    color: gray;
+    width: 320px;
+}
+
+table tr th{
+    width: 80px;
+}
+#chat{
+
+}

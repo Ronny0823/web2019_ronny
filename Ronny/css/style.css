@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#marco{
+    margin: 50px;
+    margin-left:500px; 
+    background: #fff;
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+    border: 2px solid black
+}
+
+#marco #bar{
+    background: #484d49;
+    width: auto;
+    height: 80px;   
+}
+
+#marco iframe{
+    height: 420px;
+    width: 400px;
+}

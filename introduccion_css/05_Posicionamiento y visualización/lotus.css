@@ -1,0 +1,92 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial;
+}
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    /*bac*/
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+     nav a{
+         text-decoration: none;
+         color: #aaaaaa;
+         margin:30px;
+     }
+
+/* canbiar color en el hover*/
+nav a:hover{
+    color: orangered;
+    border-bottom: solid 1px orangered;
+}
+
+section article div{
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+section article div h1{
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+section article div p{
+    font-size: 14px;
+    width: 75%;
+    line-height: 25px;
+    margin-bottom: 30px;
+    
+}
+/* clase de utilidad*/
+.btn{
+    background:#FF0000;
+    text-decoration: none;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+
+}
+.tex-orange{
+    color: #ff3b01;
+}
+.tex-darkgray{
+    color:  #313243;
+}
+.tex-lightgray{
+    color:#aaa;
+}
+
+
+.bg-orange{
+    background-color: #ff3b01;
+}
+.bg-darkgray{
+    background-color:  #313243;
+}
+.bg-lightgray{
+    background-color:#aaa;
+}
+/* Agregar fondo*/
+section#principal{
+    height: 100vh;
+    background-image: url("yoga.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    
+}
