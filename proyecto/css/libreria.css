@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Ewert|Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Ewert|Playfair+Display|Roboto&display=swap');
 /*Reset*/
 *{
     margin: 0;
@@ -5,7 +8,8 @@
 }
 
 body{
-    font-family: Arial;
+    font-family: 'Ewert', cursive;
+    font-family: 'Playfair Display', serif;
 }
 
 a{
@@ -15,4 +19,23 @@ a{
 .fullscreen{
     width: 100vw;
     height: 100vh;
+} 
+h1{
+    font-family: 'Ewert', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+}
+
+/* Agregar fondo */
+section#principal{
+    height: 200vh;
+    background-image: url(ronny-1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right;
+}
+
+  
+  background-position-x: right;
+
 }

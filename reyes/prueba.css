@@ -7,6 +7,7 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
+    background:#fef5da; 
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
@@ -28,14 +29,14 @@ nav{
 }
      nav a{
          text-decoration: none;
-         color: #aaaaaa;
+         color: #0f0202;
          margin:30px;
      }
 
 /* canbiar color en el hover*/
 nav a:hover{
-    color: orangered;
-    border-bottom: solid 1px orangered;
+    color: 		blue;
+    border-bottom: solid 1px rgb(255, 0, 0);
 }
 
 section article div{
@@ -57,31 +58,33 @@ section article div p{
 }
 /* clase de utilidad*/
 .btn{
-    background:#FF0000;
+    background:#FFFFFF;
     text-decoration: none;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    color: #fff;
+    color: rgb(19, 18, 18);
+    font-weight: bold;
 
 }
 .tex-orange{
-    color: #ff3b01;
+    color: ;
 }
 .tex-darkgray{
     color:  #313243;
 }
 .tex-lightgray{
-    color:#aaa;
+    color:rgb(61, 55, 55);
 }
 
 
 .bg-orange{
-    background-color: #ff3b01;
+    background:#ff6394;
+    font-weight: bold
 }
 .bg-darkgray{
-    background-color:  #313243;
+    border: 1px solid; 
 }
 .bg-lightgray{
     background-color:#aaa;
@@ -89,9 +92,16 @@ section article div p{
 /* Agregar fondo*/
 section#principal{
     height: 100vh;
-    background-image: url("yoga.png");
+    background-image: url("hiring_artist.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: right;
     
 }
+footer a i{
+    color: #0f0202;
+    padding: 10px;
+    margin: 10px;
+}
+
+
