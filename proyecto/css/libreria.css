@@ -21,7 +21,7 @@ a{
     height: 100vh;
 } 
 h1{
-    font-family: 'Ewert', cursive;
+font-family: 'Ewert', cursive;
 font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
 }
@@ -29,13 +29,11 @@ font-family: 'Roboto', sans-serif;
 /* Agregar fondo */
 section#principal{
     height: 200vh;
+    width: 300vh;
     background-image: url(ronny-1.svg);
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: right;
+    background-size: 50%;
+    background-position-x: right;
 }
 
   
-  background-position-x: right;
-
-}
