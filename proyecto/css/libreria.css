@@ -27,13 +27,13 @@ font-family: 'Roboto', sans-serif;
 }
 
 /* Agregar fondo */
-section#principal{
-    height: 200vh;
+section img {
+    height: 50vh;
     width: 300vh;
     background-image: url(ronny-1.svg);
     background-repeat: no-repeat;
     background-size: 50%;
-    background-position-x: right;
+    background-position-x:right;
 }
 
   
