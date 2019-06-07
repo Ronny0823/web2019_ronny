@@ -17,7 +17,7 @@ a{
 }
 
 .fullscreen{
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
 } 
 h1{
@@ -25,15 +25,24 @@ font-family: 'Ewert', cursive;
 font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
 }
+p{
+    font-family: 'Ewert', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;  
+}
 
 /* Agregar fondo */
 section img {
-    height: 50vh;
+    height: 80vh;
     width: 300vh;
     background-image: url(ronny-1.svg);
     background-repeat: no-repeat;
     background-size: 50%;
     background-position-x:right;
+}
+body img{
+    height: 80vh;
+    width: 50vh;  
 }
 
   
