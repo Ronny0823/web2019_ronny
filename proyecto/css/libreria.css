@@ -17,8 +17,10 @@ a{
 }
 
 .fullscreen{
-    width: 50vw;
-    height: 100vh;
+    width: auto;;
+    height:auto ;
+    margin: 5px;
+    padding: 10px;
 } 
 h1{
 font-family: 'Ewert', cursive;
@@ -28,21 +30,45 @@ font-family: 'Roboto', sans-serif;
 p{
     font-family: 'Ewert', cursive;
     font-family: 'Playfair Display', serif;
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'Roboto', sans-serif;
+    width: 70vh;  
 }
 
 /* Agregar fondo */
 section img {
-    height: 80vh;
+    height: 150vh;
+    width: 300vh;
+    background-image: url(../img/la_foto.JPG);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position-x:right;
+}
+li {
+    display: list-item;
+    
+}
+ul {
+    display: block;
+    list-style-type: disc;
+   
+}
+li{
+    font-family: 'Ewert', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+}
+nav img{
+    height: 300px;
+    width: 200px;
+}
+img{
+    height: 150vh;
     width: 300vh;
     background-image: url(ronny-1.svg);
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100px;
     background-position-x:right;
 }
-body img{
-    height: 80vh;
-    width: 50vh;  
+h2{
+    font-size: 35px;
 }
-
-  
