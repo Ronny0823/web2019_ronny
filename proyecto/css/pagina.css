@@ -60,7 +60,7 @@ background-size: cover;
    }
    button{
        padding: 10px;
-       margin: center;   
+         
    }
    body#fon{
     background-color: #ff7700;
@@ -75,3 +75,20 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 nav a i{
     width: 22px;
 }
+table ul,li{
+    margin: 100px;
+}
+video{
+    margin: 100px;
+    width:  1000px;
+    padding: 50px;
+}
+div img{
+  
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  td{
+      border: 2px solid #000;
+      background-color: #fbfcf9;
+  }
