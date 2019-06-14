@@ -16,10 +16,8 @@ nav a{
     padding-left: 30px;
     padding-right: 30px;
 
-   
 }
 nav{
-    background: rgb(243, 241, 241);
     width: 100vw;
     height: 60px;
     padding-top: 60px;
@@ -39,13 +37,14 @@ nav a i{
     color: rgb(57, 77, 167);
 }
 #marco{
+    
     margin: 50px;
     margin-left:500px; 
     background: #fff;
     height: 500px;
     width: 400px;
     overflow: hidden;
-    border: 2px solid black
+    border: 5px solid black;
 }
 
 body form {
@@ -77,6 +76,7 @@ nav a i{
 }
 table ul,li{
     margin: 100px;
+    
 }
 video{
     margin: 100px;
@@ -85,6 +85,7 @@ video{
 }
 div img{
 margin: 20px;
+ 
     
   }
   #ren tr td{
@@ -103,5 +104,28 @@ margin: 20px;
    background-color: #ff7700;
   margin: 10px;
     padding: 4px;
+    
 
+}
+#ren tr td  p{
+    margin: 5px;
+
+}
+#ren tr td p b{
+    padding-left: 10px;
+}
+aside {
+    color: rgb(252, 248, 248);
+}
+.mgt{
+    border: 2px solid #000;
+    background-color: #ff7700;
+    width: 200px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+ table tr td .foto{
+    width:250px;
 }
