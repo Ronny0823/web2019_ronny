@@ -84,29 +84,24 @@ video{
     padding: 50px;
 }
 div img{
-  
-    animation-name: example;
-    animation-duration: 4s;
+margin: 20px;
+    
   }
-  td{
+  #ren tr td{
       border: 2px solid #000;
       background-color: #fbfcf9;
   }
-  .slidein {
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: 3;
-    animation-direction: alternate;
-  }
-  
-  @keyframes slidein {
-    from {
-      margin-left:100%;
-      width:300%
-    }
-    
-    to {
-     margin-left:0%;
-     width:100%;
-   }
-  }
+  #ren tr td img {
+    margin: 50px;
+    padding: 40px;
+   
+}
+#ren tr td  a {
+   border: 2px solid #000;
+   text-decoration: none;
+   color: #1c077a;
+   background-color: #ff7700;
+  margin: 10px;
+    padding: 4px;
+
+}
