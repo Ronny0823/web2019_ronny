@@ -9,7 +9,7 @@ titulo1.addEventListener("click",function(){
 })
 
 /*seleccionar el elementos */
-var parrafoMostrar =document.querySelector("p#mostrar")
+var parrafoMostrar =document.querySelector("#mostrar")
 var divContenido =document.querySelector("#contenido")
 
 // Registrar el evento al elemento
