@@ -1,0 +1,316 @@
+(function(){angular.module("carRentalConstants").constant("brandConstant",{feedbackUniqueid:"https://secure.opinionlab.com/ccc01/o.asp?id=vRoaMxSL&custom_var=null|"+typeof ClickTaleGetPID==="function"?ClickTaleGetPID():"null|"+typeof ClickTaleGetUID==="function"?ClickTaleGetUID():"null|"+typeof ClickTaleGetSID==="function"?ClickTaleGetSID():"null",mapCredentials:"Ajy8rChiBg3icqRJWY0wCciu9y2_gmGMShPOOae0f8nYlc6SgkkW6N1C99UhfjwY",DotCoUkUrl:"https://www.avis.co.uk",DotComLACUrl:"https://www.avislac.com",EnableStep3RateCode:["jq"]})
+})();
+(function(){angular.module("carRental").controller("ProfileDashboardExnController",a);
+a.$inject=["$scope","$rootScope","$state"];
+function a(c,b,d){}})();
+(function(){angular.module("dashboard").controller("DashboardExnController",a);
+a.$inject=["$scope","$controller"];
+function a(c,b){}})();
+(function(){angular.module("login").controller("LoginExnController",a);
+a.$inject=["$scope","$controller"];
+function a(c,b){}})();
+(function(){angular.module("reservation").controller("BridgeExnController",a);
+a.$inject=["$scope","$rootScope","$state"];
+function a(c,b,d){}})();
+(function(){angular.module("reservation").controller("ResWidgetExnController",a);
+a.$inject=["$scope","$rootScope","$q"];
+function a(d,b,c){}})();
+(function(){angular.module("carRental").controller("TeaserExnController",a);
+a.$inject=["$scope","$rootScope"];
+function a(c,b){}})();
+(function(){angular.module("location").controller("LocationExnController",a);
+a.$inject=["$scope"];
+function a(b){var c=this
+}})();
+(function(){angular.module("offers").controller("SignUpExnCntrl",a);
+a.$inject=["$scope","signupEmailService","language","$validation","$location","$state"];
+function a(b,h,g,e,f,c){var d=this
+}})();
+(function(){angular.module("reservationServices").factory("ReservationUtility",a);
+a.$inject=["getDataService","carRentalConstant","$q","$filter"];
+function a(g,e,d,f){var b={mock:c};
+function c(){return true
+}return b
+}})();
+(function(){angular.module("carRental").controller("tripItController",a);
+a.$inject=["$scope","$controller","tripItService","$anchorScroll","$rootScope","storageService","anchorSmoothScroll","$state","$location","$validation","$cookies","sessionIdleService","getDataService","$window","$sce","authenticationService","locationService","carRentalConstant","$injector"];
+function a(x,f,h,j,m,l,o,C,k,y,w,p,n,t,r,s,B,g,z){f("ExceptionHandlerController",{$scope:x});
+var D=this;
+D.tripItModel={};
+D.tripItSignInModal={};
+D.signUpVisible=false;
+m.requestInProgress=true;
+D.tripItsignUp=v;
+D.step4Validated=false;
+D.step4SignUpValidated=false;
+D.tripItValidation=q;
+D._validationSuccess=c;
+D._validationError=A;
+D._loginValidationSuccess=e;
+D.tripItLoginValidation=b;
+D.signIn=u;
+D.signup=false;
+D.wizarderror=false;
+D.resetForm=d;
+D._pageInit=i;
+function i(){s.init(true).then(function(E){var F=E.webHeader.tripItCookieExists;
+if(F){t.location.href=m.contextPath+"/"+m.locale+"/reservation/tripIt-account"+htmlExtension+"?state=true"
+}else{m.requestInProgress=false
+}})
+}function v(E){D.signUpVisible=!D.signUpVisible;
+if(D.prod){D.prod.error=[]
+}D.step4SignUpValidated=false;
+setTimeout(function(){o.scrollTo(E)
+},0)
+}function d(E){y.reset(E);
+D.step4Validated=false;
+D.step4SignUpValidated=false;
+if(D.prod){D.prod.error=[]
+}}function q(E){D.signup=true;
+y.validate(E).success(function(){D._validationSuccess()
+}).error(function(F){D._validationError(F)
+})
+}function c(){m.requestInProgress=true;
+D.step4SignUpValidated=false;
+h.load(D.tripItModel).then(function(H){m.requestInProgress=false;
+if(H.fieldErrors&&H.fieldErrors.length>0){var I="";
+for(var F=0;
+F<H.fieldErrors.length;
+F++){if(H.fieldErrors[F].fieldName){I="vm.tripItModel."+H.fieldErrors[F].fieldName;
+y.displayServiceError(I,"invalid")
+}}if(H.fieldErrors&&H.fieldErrors.length>1){D.step4SignUpValidated=true;
+D.step4PageError=Dictionary.I18n.get("err.global.multi.errorMessage")
+}}if(angular.isDefined(H.errorList)){angular.forEach(H.errorList,function(J){if(angular.equals(J.code,"14184")){D.wizarderror=true;
+D.wizardmessage=J.message
+}else{D.wizarderror=false;
+D.prod=H
+}})
+}if(H.oAuthToken){var G={oauth_token:H.oAuthToken,oauth_callback:(window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:"")+contextPath+"/"+apiurl+"/tripit/enroll")};
+var E=ABG.generateURL("https://www.tripit.com/oauth/authorize",G);
+t.location.href=E
+}})
+}function A(E){if(D.signup==true){D.step4SignUpValidated=true
+}else{D.step4Validated=true
+}D.errorDisplayList=[];
+var F=E.errorCount;
+if(1===F){D.step4PageError=r.trustAsHtml(E.MSG[0])
+}else{if(1<F){D.step4PageError=Dictionary.I18n.get("err.global.multi.errorMessage")
+}}}function u(){if(D.prod){D.prod.error=[]
+}D.step4Validated=false
+}function b(E){D.signup=false;
+y.validate(E).success(function(){D._loginValidationSuccess()
+}).error(function(F){D._validationError(F)
+})
+}function e(){m.requestInProgress=true;
+D.step4Validated=false;
+h.submitSignInDetails(D.tripItSignInModal).then(function(F){m.requestInProgress=false;
+if(F.fieldErrors&&F.fieldErrors.length>0){var G="";
+for(var E=0;
+E<F.fieldErrors.length;
+E++){if(F.fieldErrors[E].fieldName){G="vm.tripItSignInModal."+F.fieldErrors[E].fieldName;
+y.displayServiceError(G,"invalid")
+}}if(F.fieldErrors&&F.fieldErrors.length>1){D.step4Validated=true;
+D.step4PageError=Dictionary.I18n.get("err.global.multi.errorMessage")
+}}D.prod=x.processErrorMessage(F);
+if(angular.isDefined(D.prod.errorList)&&D.prod.errorList.length>0){D.prod.error=D.prod.errorList[0].message
+}if(angular.isDefined(F.autoAdd)&&angular.isDefined(F.subscribe)){t.location.href=m.contextPath+"/"+m.locale+"/reservation/tripIt-account"+htmlExtension+"?state=true"
+}})
+}i()
+}})();
+(function(){angular.module("carRental").service("tripItService",a);
+a.$inject=["$http","$q","$filter","$rootScope","$window","exceptionHandler","authenticationService","carRentalConstant","reservationModelService","locationService"];
+function a(m,f,k,o,c,l,n,b,j,e){var r={submit:i,submitSignInDetails:h,getSignedInDetails:q,updatedPreferences:d,updatedWizardDetails:g,load:p};
+function p(u){var t=n.getXsrfToken();
+if(!t){var s=f.defer();
+var v=n.init(true);
+f.all([v]).then(function(w){i(u).then(function(x){s.resolve(x)
+})
+});
+return s.promise
+}else{return i(u)
+}}function i(u){var t={lastName:u.lastName,email:u.email,firstName:u.firstName,wizardNumber:u.wizardNumber};
+t.rqHeader={locale:internalLocale};
+var s=f.defer();
+m({method:"POST",url:apiurl+"/tripit/enroll",data:t}).success(function(x,v,y,w){s.resolve(x)
+}).error(function(x,v,y,w){});
+return s.promise
+}function h(t){var s={lastName:t.lastName,email:t.email};
+var u=f.defer();
+m({method:"POST",url:apiurl+"/tripit/signin",data:s}).success(function(x,v,y,w){u.resolve(x)
+}).error(function(x,v,y,w){});
+return u.promise
+}function q(){var s=f.defer();
+m({method:"GET",url:apiurl+"/tripit/signin"}).success(function(v,t,w,u){s.resolve(v)
+}).error(function(v,t,w,u){});
+return s.promise
+}function d(u){var s={emailOffersSubscribe:u.emailOffersSubscribe,autoAddToTripit:u.autoAddToTripit};
+var t=f.defer();
+m({method:"POST",url:apiurl+"/tripit/modify",data:s}).success(function(x,v,y,w){t.resolve(x)
+}).error(function(x,v,y,w){});
+return t.promise
+}function g(t){var u={wizardNumber:t.wizardNumber,lastName:t.lastName,discountNumber:t.discountNumber};
+var s=f.defer();
+m({method:"POST",url:apiurl+"/tripit/rental-preference",data:u}).success(function(x,v,y,w){s.resolve(x)
+}).error(function(x,v,y,w){});
+return s.promise
+}return r
+}})();
+(function(){angular.module("carRental").controller("tripItUpcomingController",a);
+a.$inject=["$scope","$controller","tripItService","$rootScope","storageService","$state","$location","$validation","$cookies","sessionIdleService","authenticationService","getDataService","$window","$sce","carRentalConstant","geoservices","$injector","reservationModelService","vehicleService","locationService","bridgeService"];
+function a(n,y,d,r,H,v,C,b,w,e,I,p,K,g,G,u,B,t,o,c,x){y("ExceptionHandlerController",{$scope:n});
+var q=this;
+var E="";
+r.mapModalPath="";
+var s="";
+var N="";
+var O=true;
+var l=null;
+q.upcomingTripDetails=[];
+q.reservationModel={};
+q.autoAdd=false;
+q.emailOffers=false;
+q.successMessage=false;
+q.step4SignUpValidated=false;
+q.updatedModel={};
+q.addCar=j;
+q.updatePreference=f;
+q.tripitWizardDetails=m;
+q.reservationModel=angular.copy(t.bookingModel);
+q._pageInit=F;
+q._resolveLocation=A;
+q._getAlternateOpenLocation=z;
+q._locationSearchHandler=J;
+q._searchVehicle=L;
+q.sign_up=false;
+q.showWizard=true;
+q.successMessageEmail=false;
+q.successMessageAutoAdd=false;
+q.successWizard=false;
+q.successWizardMessage;
+q.wizarderror=false;
+q._validationSuccess=M;
+q.title="";
+q.errorMsg=false;
+q.reason="";
+q.WizardModel={wizardNumber:"",lastName:"",discountNumber:""};
+function F(){r.requestInProgress=true;
+d.getSignedInDetails().then(function(P){r.requestInProgress=false;
+if(angular.isDefined(P.autoAdd)&&angular.isDefined(P.subscribe)){q.updatedModel={emailOffersSubscribe:P.subscribe,autoAddToTripit:P.autoAdd};
+if(P.trips){q.upcomingTripDetails=P
+}else{q.sign_up=true;
+q.showWizard=false
+}}else{K.location.href=r.contextPath+"/"+r.locale+"/reservation/tripit"+htmlExtension
+}})
+}q._pageInit();
+function f(P){r.requestInProgress=true;
+d.updatedPreferences(q.updatedModel).then(function(Q){r.requestInProgress=false;
+q.prod=n.processErrorMessage(Q);
+if(angular.isDefined(Q.autoAdd)&&angular.isDefined(Q.subscribe)){if(P==="remember"){q.successMessageEmail=true;
+q.successMessageAutoAdd=false
+}else{if(P==="rememberme"){q.successMessageAutoAdd=true;
+q.successMessageEmail=false
+}}}})
+}function m(P){b.validate(P).success(function(){q._validationSuccess()
+})
+}function M(){if(q.prod){q.prod.errorList=[]
+}q.wizarderror=false;
+q.successWizard=false;
+q.updatedWizardModel={wizardNumber:q.WizardModel.wizardNumber,lastName:q.WizardModel.lastName,discountNumber:q.WizardModel.discountNumber};
+if(q.WizardModel.wizardNumber!=""&&q.WizardModel.lastName==""){b.displayServiceError("vm.WizardModel.lastName","required")
+}else{if(q.WizardModel.wizardNumber==""&&q.WizardModel.lastName!=""){b.displayServiceError("vm.WizardModel.wizardNumber","required")
+}else{r.requestInProgress=true;
+q.step4SignUpValidated=false;
+d.updatedWizardDetails(q.updatedWizardModel).then(function(Q){r.requestInProgress=false;
+if(Q.fieldErrors&&Q.fieldErrors.length>0){var R="";
+for(var P=0;
+P<Q.fieldErrors.length;
+P++){if(Q.fieldErrors[P].fieldName){R="vm.WizardModel."+Q.fieldErrors[P].fieldName;
+b.displayServiceError(R,"invalid")
+}}if(Q.fieldErrors&&Q.fieldErrors.length>1){q.step4SignUpValidated=true;
+q.step4PageError=Dictionary.I18n.get("err.global.multi.errorMessage")
+}}if(angular.isDefined(Q.errorList)){angular.forEach(Q.errorList,function(S){if(angular.equals(S.code,"14184")){q.wizarderror=true;
+q.wizardmessage=S.message
+}else{q.wizarderror=false;
+q.prod=Q
+}})
+}if((Q.success=="TRUE")||(Q.success===undefined)){if(((q.updatedWizardModel.wizardNumber!="")&&(q.updatedWizardModel.lastName!="")&&(q.updatedWizardModel.discountNumber!=""))&&Q.success){q.successWizard=true;
+q.successWizardMessage=Dictionary.I18n.get("lbl.tripit.success.AWDandWzardLastName",[q.updatedWizardModel.wizardNumber,q.updatedWizardModel.lastName,q.updatedWizardModel.discountNumber])
+}else{if(((q.updatedWizardModel.wizardNumber!="")&&(q.updatedWizardModel.lastName!=""))&&Q.success){q.successWizard=true;
+q.successWizardMessage=Dictionary.I18n.get("lbl.tripit.success.wizardAndLastName",[q.updatedWizardModel.wizardNumber,q.updatedWizardModel.lastName])
+}else{if(q.updatedWizardModel.discountNumber!=""&&(!Q.fieldErrors)){q.successWizard=true;
+q.successWizardMessage=Dictionary.I18n.get("lbl.tripit.success.AWD",q.updatedWizardModel.discountNumber)
+}}}}})
+}}}var k=r.$on("learnwhy",function(Q,R){var P=o.learnWhyErrorMsg(q,R);
+q.title=P.title;
+q.errorMsg=P.errorMsg;
+q.reason=P.reason;
+setTimeout(function(){n.$apply();
+jQuery(".generic-modal").modal("show")
+},100)
+});
+n.$on("$destroy",function(){k()
+});
+function j(P){t.setReservationModel(q.reservationModel);
+l=P;
+if(l&&l.tripHref&&(l.tripHref.pickupLocationCode===null||l.tripHref.pickupLocationCode==="null"||l.tripHref.returnLocationCode===null||l.tripHref.returnLocationCode==="null"||angular.isUndefined(l.tripHref.pickupLocationCode)||angular.isUndefined(l.tripHref.returnLocationCode))){q._getAlternateOpenLocation(1,G.alternateLocation,l.tripHref.searchAddress)
+}else{x.processTripItReservation(l,false)
+}}function h(Q){var R={day:Q.date,month:Q.month,year:Q.year};
+if(R.day<10){R.day="0"+R.day
+}if(R.month<10){R.month="0"+R.month
+}var P=R.year+"-"+R.month+"-"+R.day;
+return P
+}function L(){o.load(O).then(function(P){P=n.processErrorMessage(P);
+if(P.vehicleSummaryList&&((!P.errorList)||(P.errorList&&P.errorList.length===0))){window.location.href=r.contextPath+"/"+r.locale+"/reservation"+htmlExtension+"#/vehicles"
+}else{window.location.href=r.contextPath+"/"+r.locale+"/reservation"+htmlExtension+"#/time-and-place"
+}})
+}function z(R,Q,P){p.addToProximityLocationData({});
+if(angular.isDefined(R)){E=R
+}s=G.windowTypeAlternate;
+if(angular.isDefined(Q)){s=G.alternateLocation
+}if(angular.isDefined(P)){N=P
+}if(r.mapModalPath===""){r.mapModalPath=location.pathname.replace(".html","")+".map-modal"+htmlExtension
+}else{q._resolveLocation()
+}if(r.keyDropPath===""){r.keyDropPath=location.pathname.replace(".html","")+".keydrop-modal"+htmlExtension
+}}function A(){jQuery(".modal").modal("hide");
+r.requestInProgress=false;
+if(s===G.windowTypeAlternate){var P={requestFrom:"proximity",resolvePosition:E};
+r.$broadcast("searchLocation.request",P)
+}else{if(s===G.alternateLocation){var P={requestFrom:"stationProximity",inputLocation:N,resolvePosition:E};
+r.$broadcast("searchLocation.request",P)
+}else{if(s===G.windowTypePossibleMatch){var P={requestFrom:"possibleMatch",inputLocation:N.value,resolvePosition:E,resolve:N.resolve};
+r.$broadcast("searchLocation.request",P)
+}}}}function J(P){P.suggCode=P.locCode;
+function Q(){if(angular.equals(q.locationValidateState,{})){l.tripHref.pickupLocationCode=P.locCode;
+l.tripHref.returnLocationCode=P.locCode;
+j(l)
+}else{if((q.locationValidateState[0].pickupLocation.resolved===true&&E===2)||(q.locationValidateState[1].windowType===""&&q.locationValidateState[1].dropLocation.resolved===true)){l.tripHref.pickupLocationCode=P.locCode;
+l.tripHref.returnLocationCode=P.locCode;
+j(l)
+}else{s=q.locationValidateState[1].windowType;
+q.locationValidateState[0].pickupLocation.resolved=true;
+E=2;
+N=q.locationValidateState[1];
+N.resolveRequest=2;
+N.value=q.locationValidateState[1].dropLocation.value;
+N.resolve=q.locationValidateState[1].resolve;
+q._resolveLocation()
+}}}if(angular.isDefined(P)&&(angular.equals(P.event,"SELECT")||angular.equals(P.event,"SOLD"))&&(s===G.windowTypeAlternate||s===G.alternateLocation)&&(angular.isDefined(P.requestFrom)&&(angular.equals(P.requestFrom,"proximity")||angular.equals(P.requestFrom,"stationProximity")))){l.tripHref.pickupLocationCode=P.locCode;
+l.tripHref.returnLocationCode=P.locCode;
+x.processTripItReservation(l,true).then(function(R){r.requestInProgress=false;
+if(angular.isDefined(R.errorList)&&R.errorList.length>0&&(angular.equals(R.errorList[0].code,"157")||angular.equals(R.errorList[0].code,"158")||angular.equals(R.errorList[0].code,"161"))){r.$emit("searchLocation.soldOutNotification",P)
+}else{jQuery(".modal").modal("hide");
+r.requestInProgress=true;
+j(l)
+}})
+}else{if(angular.isDefined(P)&&(angular.equals(P.event,"SELECT")||angular.equals(P.event,"SOLD"))&&s==="POSSIBLEMATCH"&&(angular.isDefined(P.requestFrom)&&angular.equals(P.requestFrom,"possibleMatch"))){jQuery(".modal").modal("hide");
+r.requestInProgress=true;
+l.tripHref.pickupLocationCode=P.locCode;
+l.tripHref.returnLocationCode=P.locCode;
+j(l)
+}else{if(angular.isDefined(P)&&angular.equals(P.event,"CLOSE")){closeModalWindow();
+r.requestInProgress=false
+}}}}var D=r.$on("searchLocation.response",function(Q,P){q._locationSearchHandler(P)
+});
+var i=r.$on("LocationControllerLoaded",function(Q,P){q._resolveLocation()
+})
+}})();
