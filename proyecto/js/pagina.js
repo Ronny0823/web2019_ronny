@@ -1,15 +1,15 @@
 var nombre= document.querySelector("input#nombre");
 var apllido =document.querySelector("input#apellido");
-var tudirecion de correo electronico = document.querySelector("input#tudirecion de correo electronico");
-var contrasena nueva =document.querySelector("input#contrasena nueva");
+var  correo  = document.querySelector("input# correo");
+var contrasena  =document.querySelector("input#contrasena nueva");
 var div = document.querySelector("div#contenido");
 var Regístrate = document.querySelector("button#Regístrate");
 
 
 console.log(nombre);
 console.log(apllido);
-console.log(tudirecion de correo electronico);
-console.log(contrasena nueva);
+console.log( correo );
+console.log(contrasena );
 
 
 
